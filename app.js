@@ -18,6 +18,6 @@ function jsonCallback(json){
 }
 
 $.ajax({
-  url: "http://climatedataapi.worldbank.org/climateweb/rest/v1/country/",
+  url: "http://climatedataapi.worldbank.org/climateweb/rest/v1/country?callback=handler",
   dataType: "jsonp"
 });
