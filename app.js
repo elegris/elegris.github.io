@@ -42,7 +42,7 @@ var userLocation
 // })
 
 var currentCountry = "usa";
-futureClimateUrl = ("https://accesscontrolalloworiginall.herokuapp.com/http://climatedataapi.worldbank.org/climateweb/rest/v1/country/annualavg/bccr_bcm2_0/b1/tas/2080/2099/" + currentCountry + ".json");
+futureClimateUrl = ("https://accesscontrolalloworiginall.herokuapp.com/http://climatedataapi.worldbank.org/climateweb/rest/v1/country/annualavg/bccr_bcm2_0/b1/tas/2080/2099/usa.json");
 $.get(futureClimateUrl, function(res) {
 	console.log(response);
 });
