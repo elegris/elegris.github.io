@@ -18,6 +18,6 @@ function jsonCallback(json){
 }
 
 $.ajax({
-  url: "http://climatedataapi.worldbank.org/climateweb/rest/v1/country/annualavg/bccr_bcm2_0/b1/tas/2080/2099/fra.json?callback=handler",
+  url: "https://climatedataapi.worldbank.org/climateweb/rest/v1/country/annualavg/bccr_bcm2_0/b1/tas/2080/2099/fra.json?callback=handler",
   dataType: "jsonp"
 });
