@@ -37,6 +37,6 @@ var userLocation
 // 	console.log(response);
 // })
 
-$.getJSON('https://accesscontrolalloworiginall.herokuapp.com/http://climatedataapi.worldbank.org/climateweb/rest/v1/country/', function(response) {
+$.get('https://accesscontrolalloworiginall.herokuapp.com/http://climatedataapi.worldbank.org/climateweb/rest/v1/country/', function(response) {
 	console.log(response);
 })
