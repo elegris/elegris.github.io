@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Climate Change & You</title>
+	<title>Climate Change in Your Backyard</title>
+	<link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 <body>
 
 <!-- start header -->
-<div class="header">
-	<h1>Climate Change & You</h1>
-</div>	
+<header><div>
+	<h1>Climate Change in Your Backyard</h1>
+</div></header>
 <!-- end header -->
 
 <!-- dropdown country select -->
-<select>
-	<option value="example1">Example 1</option>
-	<option value="example2">Example 2</option>
-	<option value="example3">Example 3</option>
-</select>
+<span class="custom-dropdown custom-dropdown--white">
+	<select id="country-dropdown" class="custom-dropdown__select custom-dropdown__select--white">
+		<option value="1">Loading countries...</option>
+	</select>
+	<select id="sres-scenario" class="custom-dropdown__select custom-dropdown__select--white">
+		<option value="a2">A2 Scenario</option>
+		<option value="b1">B1 Scenario</option>
+	</select>
+</span>
+<button class="btn">GET CLIMATE DATA</button>
 <!-- end dropdown country select -->
 
-<!-- climate data -->
-<ul id="climateData">
-	<li id="currentAvg">Current Average Temperature: X</li>
-	<li id="futureAvg">Average Temperature by 2080: Y</li>
+<!-- start page body -->
+
+<p id="preamble"><b>Not sure how climate change will impact <span id="userLocation">your country</span>?</b> 
+	</br> Select a country and a <a href="http://www.ipcc.ch/ipccreports/sres/emission/index.php?idp=3" target="_blank">SRES emissions scenario</a> above to find out.
+</p>
+
+<ul id="climateData" class="climateData hidden">
+	<li>In <span id="countryName">ABC</span>, the average temperature was <span id="currentAvg">X</span> in 2012. By the end of the century, the projected annual average temperature will be <span id="futureAvg">Y</span>. That's an increase of <span id="climateChange">Z</span>!</li>
 </ul>
 
-<!-- end climate data -->
+<p id="CTA" class="hidden"><b>What can you do for <span id="countryName2">ABC</span>?</b> 
+	</br><a href="https://www3.epa.gov/climatechange/wycd/" target="_blank">Reduce your impact</a> and <a href="https://350.org/about/what-we-do/" target="_blank">join the campaign for broader change.</a>
+</p>
+
+<div class="deemphasized hidden">Last 10 Countries Selected
+	<ul class="selectedCountriesList hidden"></ul>
+</div> 
+
+<p class="footer hidden">Built using the World Bank's Climate Data API. Data above returns result for the median values of the 15 Global Climate Models for the A2 emissions scenario and the 8 Global Climate Models for the B1 emissions scenario.</p>
+
+<!-- end page body -->
+
+<!-- start script links -->
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 
+  <!-- firebase cdn -->
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
   <!-- js -->
   <script type="text/javascript" src="app.js"></script>
+
+<!-- end script links -->
 
 </body>
 </html>
